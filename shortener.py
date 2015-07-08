@@ -38,4 +38,6 @@ def get_short_url():
     else:
         abort(401, 'Sorry, access denied. Get your own shortener ;)')
 
-app.run(host='0.0.0.0', port=int(os.environ.get('PORT',5000)), debug=False, server='cherrypy')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT',5000)), debug=False, server='cherrypy')
